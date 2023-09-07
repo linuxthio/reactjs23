@@ -1,0 +1,44 @@
+ALGORITHM second_task
+VAR
+    set1 : ARRAY_OF INTEGER[];
+    set2 : ARRAY_OF INTEGER[];
+    set3 : ARRAY_OF INTEGER[];
+
+    i , j ,n ,k , sum : INTEGER;
+BEGIN
+    k:=0;
+    FOR i FROM 0 TO set1.length DO
+        FOR j FROM 0 TO set2.length DO
+            IF (set1[i] = set2[j]) THEN 
+                n := n+1 ; // si n>0 alors l'element est present dans les deux set
+            END_IF
+        END_FOR
+        IF (n = 0) THEN
+            set3[k] := set1[i];
+            k :=k+1;
+        END_IF
+    END_FOR
+
+    n:= 0;
+    FOR i FROM 0 TO set2.length DO
+        FOR j FROM 0 TO set1.length DO
+            IF (set2[i] = set1[j]) THEN 
+                n := n+1 ; // si n>0 alors l'element est present dans les deux set
+            END_IF
+        END_FOR
+        IF (n = 0) THEN
+            set3[k] := set1[i];
+            k :=k+1;
+        END_IF
+    END_FOR
+
+    // faire la somme de elements de set3
+    sum:=0;
+    FOR l FROM 0 TO set3.length DO
+        sum := sum + set[l]
+    END_FOR
+
+    Write(" La somme des elements de set3 est : ")    
+    Write(sum)
+
+END

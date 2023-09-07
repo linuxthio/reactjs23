@@ -1,0 +1,29 @@
+ALGORITHM compter_mot_voyelle
+VAR
+    phrase : STRING[];
+    voyelles : STRING[] := "aeoiu";
+    mot , voy : INTEGER;
+    i , j : INTEGER;
+BEGIN
+    i:=0;
+
+    WHILE ( phrase[i]  <> ".") DO
+        IF (phrase[i] = " ") THEN
+            mot := mot+1;
+        END_IF
+
+        j:=0;
+        WHILE (j < voyelles.length) DO
+            IF (phrase[i] = voyelles[j]) THEN
+                voy := voy+1;
+            END_IF
+            j := j+1;
+        END_WHILE
+        i := i+1; // update index
+    END_WHILE
+    mot := mot + 1; // le nombre de mot est plus grand que le nombre d'espace
+    Write("le nombre de mot est ");
+    Write(mot);
+    Write("Le nombre de voyelle est :");
+    Write(voy);
+END
