@@ -35,10 +35,10 @@ BEGIN
     // faire la somme de elements de set3
     sum:=0;
     FOR l FROM 0 TO set3.length DO
-        sum := sum + set[l]
+        sum := sum + set3[l];// correction de bug
     END_FOR
 
-    Write(" La somme des elements de set3 est : ")    
-    Write(sum)
+    Write(" La somme des elements de set3 est : ");  
+    Write(sum);
 
 END
