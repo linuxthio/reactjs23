@@ -1,0 +1,29 @@
+// class VECTOR
+
+
+
+// PROCEDURE dot_product(VAR v1:VECTOR,VAR v2:VECTOR) // VECTOR est une structure ou une classe selon les langages
+PROCEDURE dot_product(VAR v1: ARRAY_OF INTEGER[2],VAR v2:ARRAY_OF INTEGER[2]) // VECTOR est une structure ou une classe selon les langages
+VAR 
+    sp: REAL;
+BEGIN
+    sp := v1[0]* v2[0] + v1[1]*v2[1];
+    RETURN sp;
+END
+
+
+ALGORITHM est_perpendiculaire
+VAR
+    couples : ARRAY_OF INTEGER[n][2][2]; // un vecteur est : couples[0][0] avec x=couples[0][0][0] et  y=couples[0][0][1]
+    i : INTEGER;
+BEGIN
+    FOR i FROM 0 TO couples.length-1 DO
+        IF dot_product(couples[i][0],couples[i][1]) = 0 THEN
+            Write("Les deux vecteurs sont orthogonaux");
+        ELSE
+            Write("Ils ne sont pas orthogonaux");
+        END_IF
+    END_FOR
+END
+
+

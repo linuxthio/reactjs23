@@ -1,0 +1,21 @@
+
+ALGORITHM tri_par_insertion
+VAR
+    liste : ARRAY_OF INTEGER[n]; // liste de n entiers
+    i ,j ,tmp ,permut: INTEGER; // tmp variable temporaire et permut variable de permutation
+
+BEGIN
+    FOR i FROM 1 TO liste.length-1 DO
+        tmp := liste[i];
+        j := i;
+        WHILE (j>0 AND liste[J-1]>tmp) DO
+            // permutation  , decalage vers la droite de la liste
+            permut := l[j];
+            l[j] := l[j-1];
+            l[j-1] := permut;
+            j := j - 1 ;
+
+        END_WHILE
+    END_FOR
+END
+
