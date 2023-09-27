@@ -24,7 +24,7 @@ function App(props) {
       </Card>
       <Card className='about'>
       <Card.Img  className='moi' src='https://gomycodelearndev.blob.core.windows.net/profiles/85cd61c5-0218-4033-907a-c0fd79889064-133384925302494483.jpg' alt='moi' />
-      <h2>{props.username}</h2>
+      <h2>Hello {props.username}</h2>
       </Card>
 
     </div>
